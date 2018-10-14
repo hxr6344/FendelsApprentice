@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114622476963711954}
   - component: {fileID: 2569400265867585464}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: IngrCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 224403554489737540}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
