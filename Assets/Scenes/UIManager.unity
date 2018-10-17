@@ -113,17 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &77451779 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1349914738463064, guid: 1cce1d1e972aebd4aaf3283c0cb4ad0a,
-    type: 2}
-  m_PrefabInternal: {fileID: 2066181482}
---- !u!114 &719140767 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114388133692258694, guid: 1cce1d1e972aebd4aaf3283c0cb4ad0a,
-    type: 2}
-  m_PrefabInternal: {fileID: 2066181482}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &961970154
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,11 +175,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1810636203 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1697313049241012, guid: 1cce1d1e972aebd4aaf3283c0cb4ad0a,
-    type: 2}
-  m_PrefabInternal: {fileID: 2066181482}
 --- !u!1 &1845699696
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,40 +348,6 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114638855343569512, guid: 1cce1d1e972aebd4aaf3283c0cb4ad0a,
-        type: 2}
-      propertyPath: hud
-      value: 
-      objectReference: {fileID: 77451779}
-    - target: {fileID: 114638855343569512, guid: 1cce1d1e972aebd4aaf3283c0cb4ad0a,
-        type: 2}
-      propertyPath: options
-      value: 
-      objectReference: {fileID: 1810636203}
-    - target: {fileID: 114638855343569512, guid: 1cce1d1e972aebd4aaf3283c0cb4ad0a,
-        type: 2}
-      propertyPath: overaly
-      value: 
-      objectReference: {fileID: 719140767}
-    - target: {fileID: 114638855343569512, guid: 1cce1d1e972aebd4aaf3283c0cb4ad0a,
-        type: 2}
-      propertyPath: overlay
-      value: 
-      objectReference: {fileID: 719140767}
-    - target: {fileID: 1029127498649254, guid: 1cce1d1e972aebd4aaf3283c0cb4ad0a, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114388133692258694, guid: 1cce1d1e972aebd4aaf3283c0cb4ad0a,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 114388133692258694, guid: 1cce1d1e972aebd4aaf3283c0cb4ad0a,
-        type: 2}
-      propertyPath: m_Type
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cce1d1e972aebd4aaf3283c0cb4ad0a, type: 2}
