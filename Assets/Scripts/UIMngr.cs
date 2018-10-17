@@ -41,14 +41,60 @@ public class UIMngr : MonoBehaviour
     public GameObject hud;
     public GameObject options;
     public GameObject overlay;
+    public GameObject mainMenu;
+    public GameObject spellBook;
+    private bool audioOn;
 
 	// Use this for initialization
 	void Start ()
     {
+        mainMenu.SetActive(true);
+        hud.SetActive(false);
+        options.SetActive(false);
+        //spellBook.SetActive(false);
+        audioOn = true;
+    }
+
+    #region Main Menu
+    public void StartGame()
+    {
         //Toggle the HUD
         hud.SetActive(true);
-	}
+        options.SetActive(false);
+        mainMenu.SetActive(false);
+        //spellBook.SetActive(false);
+    }
 
+    public void ToggleInstructions(GameObject instructions)
+    {
+        if (!instructions.active)
+        {
+            instructions.SetActive(true);
+            mainMenu.SetActive(false);
+        }
+        else
+        {
+            instructions.SetActive(false);
+            mainMenu.SetActive(true);
+        }
+    }
+
+    public void ToggleCredits(GameObject credits)
+    {
+        if (!credits.active)
+        {
+            credits.SetActive(true);
+            mainMenu.SetActive(false);
+        }
+        else
+        {
+            credits.SetActive(false);
+            mainMenu.SetActive(true);
+        }
+    }
+    #endregion
+
+    #region Options Menu
     //Toggles the options menu
     public void ToggleOptions()
     {
@@ -68,12 +114,41 @@ public class UIMngr : MonoBehaviour
         }
     }
 
+    public void ToggleAudio(Text buttonText)
+    {
+        if (audioOn)
+        {
+            buttonText.text = "Off";
+            audioOn = false;
+        }
+        else
+        {
+            audioOn = true;
+            buttonText.text = "On";
+        }
+    }
+
+    public void ToggleInstructOptions(GameObject instructions)
+    {
+        if (!instructions.active)
+        {
+            instructions.SetActive(true);
+            options.SetActive(false);
+        }
+        else
+        {
+            instructions.SetActive(false);
+            options.SetActive(true);
+        }
+    }
+    #endregion
+
     public void QuitGame()
     {
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-        #else
+#else
         Application.Quit();
-        #endif
+#endif
     }
 }
