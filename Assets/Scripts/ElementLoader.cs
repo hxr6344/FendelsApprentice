@@ -27,7 +27,6 @@ public class ElementLoader : MonoBehaviour {
 	{
 		string myLoadedItem = JsonFileReader.LoadJsonAsResource(path);
 		Element myElement = JsonUtility.FromJson<Element>(myLoadedItem);
-		elementsD.Add(new Vector2Int(myElement.ingred1,myElement.ingred2),myElement);
 	}
 	
 
