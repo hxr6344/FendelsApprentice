@@ -51,8 +51,22 @@ public class UIMngr : MonoBehaviour
         mainMenu.SetActive(true);
         hud.SetActive(false);
         options.SetActive(false);
-        //spellBook.SetActive(false);
+        spellBook.SetActive(false);
         audioOn = true;
+    }
+
+    public void ToggleSpellbook(GameObject book)
+    {
+        if (!book.active)
+        {
+            book.SetActive(true);
+            hud.SetActive(false);
+        }
+        else
+        {
+            book.SetActive(false);
+            hud.SetActive(true);
+        }
     }
 
     #region Main Menu
@@ -62,7 +76,6 @@ public class UIMngr : MonoBehaviour
         hud.SetActive(true);
         options.SetActive(false);
         mainMenu.SetActive(false);
-        //spellBook.SetActive(false);
     }
 
     public void ToggleInstructions(GameObject instructions)
@@ -70,12 +83,15 @@ public class UIMngr : MonoBehaviour
         if (!instructions.active)
         {
             instructions.SetActive(true);
-            mainMenu.SetActive(false);
+
+            if (mainMenu.active) mainMenu.SetActive(false);
+            else if (options.active) options.SetActive(false);
         }
         else
         {
             instructions.SetActive(false);
-            mainMenu.SetActive(true);
+            if (!mainMenu.active) mainMenu.SetActive(true);
+            else if (!options.active) options.SetActive(true);
         }
     }
 
@@ -125,20 +141,6 @@ public class UIMngr : MonoBehaviour
         {
             audioOn = true;
             buttonText.text = "On";
-        }
-    }
-
-    public void ToggleInstructOptions(GameObject instructions)
-    {
-        if (!instructions.active)
-        {
-            instructions.SetActive(true);
-            options.SetActive(false);
-        }
-        else
-        {
-            instructions.SetActive(false);
-            options.SetActive(true);
         }
     }
     #endregion
