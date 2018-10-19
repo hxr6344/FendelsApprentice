@@ -10,17 +10,17 @@ public class ElementLoader : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		elementsList = new List<Element>();
-		ElementDictionary dictionary = JsonUtility.FromJson<ElementDictionary>(JsonFileReader.LoadJsonAsResource("Elements/ElementDictionary.json"));
-		foreach(string dictionaryItem in dictionary.elements)
-		{
-			LoadItem(dictionaryItem);
-		}
+		// elementsList = new List<Element>();
+		// ElementDictionary dictionary = JsonUtility.FromJson<ElementDictionary>(JsonFileReader.LoadJsonAsResource("Elements/ElementDictionary.json"));
+		// foreach(string dictionaryItem in dictionary.elements)
+		// {
+		// 	LoadItem(dictionaryItem);
+		// }
 
-		foreach(KeyValuePair<Vector2Int,Element> entry in elements)
-		{
-			Element temp = elements[entry.Key];
-		}
+		// foreach(KeyValuePair<Vector2Int,Element> entry in elements)
+		// {
+		// 	Element temp = elements[entry.Key];
+		// }
 	}
 
 	public void LoadItem(string path)

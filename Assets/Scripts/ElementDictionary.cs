@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class ElementDictionary  {
 
-	public string[] elements;
+public class ElementDictionary : ScriptableObject {
+	public List<Element> allElements;	
 }
