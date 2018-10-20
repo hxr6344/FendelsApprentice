@@ -5,15 +5,24 @@ using UnityEngine.UI;
 using TMPro;
 public class DraggableElementDisplay : MonoBehaviour {
 
-	public DraggableElement element;
+	[HideInInspector] public Element element;
 
-	public GameObject nameText;
+	public TextMeshProUGUI nameText;
 	public Image image;
 
 	void Awake()
 	{
-		nameText.GetComponent<TextMeshProUGUI>().text = element.nameElement;
-		image.sprite = element.artwork;
+		//nameText.GetComponent<TextMeshProUGUI>().text = element.nameElement;
+		//image.sprite = element.artwork;
+	}
+	
+	/// <summary>
+	/// Update is called every frame, if the MonoBehaviour is enabled.
+	/// </summary>
+	void Update()
+	{
+		nameText.text = element.elementName;
+		image.sprite = element.icon;
 	}
 
 

@@ -23,12 +23,12 @@ public class ElementDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler{
 		transform.position = WorldCanvas.worldCamera.ScreenToWorldPoint(screenPoint);
 		
 		// store the last position
-		lastPosition = transform.localPosition;
+		lastPosition = transform.position;
     }
 
 	public void OnEndDrag(PointerEventData eventData)
 	{
-		transform.localPosition = Vector3.zero;
+		transform.position = lastPosition;
 	}
 	
 	// Update is called once per frame
