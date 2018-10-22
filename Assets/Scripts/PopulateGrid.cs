@@ -23,7 +23,7 @@ public class PopulateGrid : MonoBehaviour {
 		// 	temp.GetComponent<Image>().sprite = sprites[i];
 		// }
 
-		for(int i=0;i<5;i++)
+		for(int i=0;i<8;i++)
 		{
 			GameObject temp= (GameObject)Instantiate(item,transform);
 

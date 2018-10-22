@@ -8,16 +8,20 @@ public class ElementDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler{
 	Vector3 lastPosition;
 	Canvas WorldCanvas;
 
+	public bool dragging;
+
 	public /// <summary>
 	/// Awake is called when the script instance is being loaded.
 	/// </summary>
 	void Awake()
 	{
 		lastPosition = Vector3.zero;
+		dragging = false;
 		WorldCanvas = GameObject.FindGameObjectWithTag("CameraCanvas").GetComponent<Canvas>();
 	}
     public void OnDrag(PointerEventData eventData)
     {
+		dragging = true;
 		Vector3 screenPoint = Input.mousePosition;
 		screenPoint.z = WorldCanvas.planeDistance;
 		transform.position = WorldCanvas.worldCamera.ScreenToWorldPoint(screenPoint);
@@ -28,6 +32,7 @@ public class ElementDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler{
 
 	public void OnEndDrag(PointerEventData eventData)
 	{
+		dragging = false;
 		transform.position = lastPosition;
 	}
 	

@@ -104,7 +104,7 @@ MonoBehaviour:
     elementID: 29
   - elementName: Clay
     icon: {fileID: 21300000, guid: e6f2548b0842d59479cb1974d15f9884, type: 3}
-    elementID: 30
+    elementID: 20
   - elementName: Human
     icon: {fileID: 21300000, guid: 3bf39f6ac72afd74f9a6b6a12134f083, type: 3}
     elementID: 31
@@ -185,7 +185,7 @@ MonoBehaviour:
     elementID: 56
   - elementName: Brass Shards
     icon: {fileID: 21300000, guid: 93ec7b6263d2bc847b17a7e18e920046, type: 3}
-    elementID: 67
+    elementID: 57
   - elementName: Sweat
     icon: {fileID: 21300000, guid: 4ae21528b87118341b8eb765a4349401, type: 3}
     elementID: 58
@@ -228,7 +228,7 @@ MonoBehaviour:
   - elementName: Jewelweed
     icon: {fileID: 21300000, guid: 0fd551ba5ce03a4468e9e83373370620, type: 3}
     elementID: 71
-  - elementName: Stones
+  - elementName: Collection of Stones
     icon: {fileID: 21300000, guid: 44c9d639391c1ba4893d476e23938d8b, type: 3}
     elementID: 72
   - elementName: Chrysolite

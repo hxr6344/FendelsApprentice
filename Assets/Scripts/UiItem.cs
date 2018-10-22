@@ -23,15 +23,18 @@ public class UiItem : MonoBehaviour {
 	/// </summary>
 	void Start()
 	{
-		Button b1 = this.GetComponent<Button>();
-
-		b1.onClick.AddListener(SpawnDragElement);
+		
 	}
 
-	void SpawnDragElement()
+	public void SpawnDragElement()
 	{
-		GameObject temp = Instantiate(dragPrefab);
-		temp.GetComponent<DraggableElementDisplay>().element = elements.allElements[elementID];
+		GameObject temp = Instantiate(dragPrefab,Vector3.zero,transform.rotation,GameObject.FindGameObjectWithTag("CameraCanvas").transform);
+	
+		temp.GetComponent<DraggableElement>().image.sprite = elements.allElements[elementID].icon;
+		temp.GetComponent<DraggableElement>().elementID = elements.allElements[elementID].elementID;
+		temp.GetComponent<DraggableElement>().nameText.text = elements.allElements[elementID].elementName;
+		temp.GetComponent<DraggableElement>().element = elements.allElements[elementID];
+
 		
 	} 
 

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - CameraCanvas
+  - DraggableElement
+  - Trash
+  - EventSystem
   layers:
   - Default
   - TransparentFX
