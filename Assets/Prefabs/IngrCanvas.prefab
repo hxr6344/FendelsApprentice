@@ -546,7 +546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 1305107028481312, guid: f507c2642eaae0f4da119315f073d6f8, type: 2}
   sprites:
-  - {fileID: 21300000, guid: b856efb89ada11a479a380234e6c001d, type: 3}
+  - {fileID: 21300000, guid: b24df75f7c7dcba4ab20fa33ddb0aa10, type: 3}
   - {fileID: 21300000, guid: dc372e0051eabc64797fd8f9e7b6b4cf, type: 3}
   - {fileID: 21300000, guid: 2bcab48d92d9aa34daa28fa243aae550, type: 3}
   - {fileID: 21300000, guid: 7636df524766ce049b904aa67deab430, type: 3}

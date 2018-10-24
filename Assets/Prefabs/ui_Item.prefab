@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222563921715388720}
   - component: {fileID: 114603796022472262}
   - component: {fileID: 114286758914747162}
+  - component: {fileID: 114385396291532010}
   m_Layer: 5
   m_Name: ui_Item
   m_TagString: Untagged
@@ -67,9 +68,36 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114603796022472262}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114385396291532010}
+        m_MethodName: SpawnDragElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114385396291532010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305107028481312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eacce20e77cc44c4b853b66fd80c4500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementName: 
+  elementID: 0
+  sprite: {fileID: 0}
+  dragPrefab: {fileID: 1683468376907498, guid: 40684e8117ed5eb43a93dcbba9e80c83, type: 2}
+  elements: {fileID: 11400000, guid: f8d1ecf6c491fcb44a7443c8e0d6ca83, type: 2}
 --- !u!114 &114603796022472262
 MonoBehaviour:
   m_ObjectHideFlags: 1

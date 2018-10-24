@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CameraCanvas
+  - DraggableElement
+  - Trash
+  - EventSystem
   layers:
   - Default
   - TransparentFX
