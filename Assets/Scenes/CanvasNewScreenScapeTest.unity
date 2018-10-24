@@ -970,9 +970,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hud: {fileID: 274007415}
   options: {fileID: 1157425263}
-  overlay: {fileID: 0}
+  overlay: {fileID: 1450100170}
   mainMenu: {fileID: 102533960}
-  spellBook: {fileID: 0}
+  spellBook: {fileID: 417920132}
 --- !u!114 &266574976
 MonoBehaviour:
   m_ObjectHideFlags: 0
