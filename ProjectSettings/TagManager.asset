@@ -8,6 +8,7 @@ TagManager:
   - DraggableElement
   - Trash
   - EventSystem
+  - RecipeContainer
   layers:
   - Default
   - TransparentFX

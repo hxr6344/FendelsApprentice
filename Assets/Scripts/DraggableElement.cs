@@ -6,19 +6,20 @@ using TMPro;
 public class DraggableElement : MonoBehaviour {
 
 	[HideInInspector] public Element element=null;
+	[HideInInspector]public int elementID;
+
 
 	public TextMeshProUGUI nameText;
 	public Image image;
 
 	public ElementDictionary elDic;
 
-	[HideInInspector]public int elementID;
-
+	SerializableDictionaryExample m_rContainer;
 	bool canCollide = false;
 
 	void Awake()
 	{
-		
+		m_rContainer = GameObject.FindGameObjectWithTag("RecipeContainer").GetComponent<SerializableDictionaryExample>();
 	}
 	
 	/// <summary>
@@ -63,6 +64,9 @@ public class DraggableElement : MonoBehaviour {
 			Color newColor = new Color(image.color.r,image.color.g,image.color.b,image.color.a+0.2f);
 			image.color = newColor;
 
+
+			//RecipeDictionary d = new RecipeDictionary();	
+
 			int elementIndex = IsValidRecipe(this,other.gameObject.GetComponent<DraggableElement>());
 			other.gameObject.GetComponent<DraggableElement>().image.sprite = elDic.allElements[elementIndex].icon;
 			other.gameObject.GetComponent<DraggableElement>().elementID = elDic.allElements[elementIndex].elementID;
@@ -86,28 +90,18 @@ public class DraggableElement : MonoBehaviour {
 		image.color = newColor;
 	}
 
-	public int IsValidRecipe(DraggableElement e1, DraggableElement e2)
+	
+		public int IsValidRecipe(DraggableElement e1, DraggableElement e2)
 	{
-		// return ocean
-		if(e1.elementID==3&&e2.elementID==3)
+		Pair p = new Pair(e1.elementID,e2.elementID);
+		Debug.Log(m_rContainer.RecipeDictionary.Keys);
+		if(m_rContainer.RecipeDictionary.ContainsKey(new Pair(e1.elementID,e2.elementID)))
 		{
-			return 35;
-		
+			return 36;
 		}
-		// return heat
-		else if(e1.elementID==2&&e2.elementID==2)
-		{
-			return 34;
-			
-		}
-		// return cloud
-		else if((e1.elementID==0&&e2.elementID==3)||(e2.elementID==3&&e2.elementID==0))
-		{
-			return 38;
-		}
-
-		return -99;
+		return 32;
 	}
+
 
 
 
